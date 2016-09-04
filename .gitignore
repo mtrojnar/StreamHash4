@@ -1,0 +1,7 @@
+*.o
+tests/performance
+tests/benchmark
+tests/test
+tests/prng
+tests/streamhash4sum
+priv
