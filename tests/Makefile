@@ -2,7 +2,7 @@
 
 CFLAGS=-g -O3 -Wall -I ../src
 LDLIBS=-lcrypto
-EXE=performance benchmark test prng streamhash4sum
+EXE=performance speed test prng streamhash4sum
 
 all: $(EXE)
 
@@ -22,7 +22,7 @@ ent: prng
 
 performance: performance.o
 
-benchmark: benchmark.o
+speed: speed.o
 
 test: test.o
 

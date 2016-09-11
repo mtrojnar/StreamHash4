@@ -1,6 +1,6 @@
 *.o
 tests/performance
-tests/benchmark
+tests/speed
 tests/test
 tests/prng
 tests/streamhash4sum

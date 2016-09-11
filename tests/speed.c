@@ -1,4 +1,4 @@
-/* benchmark.c - display performance in the "openssl speed" format
+/* speed.c - display performance in the "openssl speed" format
  *
  * ISC License
  *
@@ -64,4 +64,4 @@ int main() {
     return 0;
 }
 
-/* end of benchmark.c */
+/* end of speed.c */
