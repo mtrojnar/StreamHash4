@@ -1,4 +1,4 @@
-/* streahmash4.c version 1.0
+/* streahmash4.c version 1.1
  *
  * ISC License
  *
@@ -100,8 +100,17 @@ static int STREAMHASH4_Final_NI(STREAMHASH4_CTX *ctx, void *md) {
         block(ctx->buf_data);
     }
 
+    /* save and reinitialize the state vector */
+    saved[0] = ctx->state[0];
+    saved[1] = ctx->state[1];
+    saved[2] = ctx->state[2];
+    saved[3] = ctx->state[3];
+    ctx->state[0] = consts[0];
+    ctx->state[1] = consts[1];
+    ctx->state[2] = consts[2];
+    ctx->state[3] = consts[3];
+
     /* update 3 times with a copy of the state vector (4 blocks each) */
-    memcpy(saved, ctx->state, 64);
     block(saved[0]); block(saved[1]); block(saved[2]); block(saved[3]);
     block(saved[0]); block(saved[1]); block(saved[2]); block(saved[3]);
     block(saved[0]); block(saved[1]); block(saved[2]); block(saved[3]);

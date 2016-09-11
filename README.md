@@ -53,7 +53,9 @@ StreamHash4 uses 4 streams, and the NLF based on the well-studied AES round:
            [NLF₁]  [NLF₂]  [NLF₃]  [NLF₄]
               │       │       │       │
               ▾       ▾       ▾       ▾
-           (int₁)  (int₂)  (int₃)  (int₄)    (finalization)
+           (int₁)  (int₂)  (int₃)  (int₄)
+
+           const₁  const₂  const₃  const₄    (finalization)
               │       │       │       │
       int₁━━━┳┿━━━━━━┳┿━━━━━━┳┿━━━━━━┓│
              ▾▾      ▾▾      ▾▾      ▾▾

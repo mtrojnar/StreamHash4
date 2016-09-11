@@ -1,4 +1,4 @@
-/* streahmash4.h version 1.0
+/* streahmash4.h version 1.1
  *
  * ISC License
  *
