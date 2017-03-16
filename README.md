@@ -8,19 +8,22 @@ Performance: ~0.35 cpb on Intel Skylake
 
 # StreamHash Family
 
-The architecture of traditional hash functions is based on iterative
-processing their state block and each input block with a compression function.
-StreamHash functions use a vector of independently processed state values
-instead of a single state block.  Each input block is mixed with each state
-vector value, and then transformed with an nonlinear function (NLF).
-Different NLFs are used for each value of the state vector.
+The architecture of traditional hash functions, also known as [Merkle–Damgård
+construction](https://en.wikipedia.org/wiki/Merkle%E2%80%93Damg%C3%A5rd_construction),
+is based on iterative processing their state block and successive input blocks
+with a one-way compression function.  The StreamHash family of hash functions
+does not use a compression function.  Instead of a single state block, they use
+a vector of independently processed state values.  Each input block is mixed
+with each state vector value, and then transformed with an nonlinear function
+(NLF).  A different NLF is used to transform each state vector value.
 
-Security of traditional hash functions are based on inability to control the
-output of their compression functions.  Dissimilarly, security of the
-StreamHash family is based on ability to only control one value of the state
-vector at a time.  Replacing complex, multi-round compression functions with
-simple, invertible, non-linear transformations results in material performance
-improvement, while maintaining the required security properties.
+Security of the Merkle–Damgård construction is based on the attacker being
+unable to control the output of the compression function.  Dissimilarly,
+security of the StreamHash family is based the attacker being able to only
+control one value of the state vector at a time.  Replacement of the complex,
+multi-round compression function with a simple, invertible, non-linear
+transformation results in material performance improvement, while maintaining
+the required security properties.
 
 # StreamHash4 Algorithm
 
