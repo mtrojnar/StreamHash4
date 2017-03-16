@@ -1,4 +1,4 @@
-/* streahmash4.c version 1.1
+/* streamhash4.c version 1.1
  *
  * ISC License
  *
