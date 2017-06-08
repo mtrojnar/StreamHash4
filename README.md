@@ -50,3 +50,9 @@ There are currently no known second preimage attacks easier than the generic bru
 
 There are currently no known collision attacks easier than the generic birthday attack.
 
+Noteworthy, creating freestart collisions appears to be feasible.  No
+complexity estimation for this attack is currently available.  We encourage
+further research of this topic.
+
+Also, no path was proposed to use a freestart collision to achieve a full
+StreamHash4 collision.
